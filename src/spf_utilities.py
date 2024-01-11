@@ -45,6 +45,13 @@ def setup_argparse() -> Namespace:
         help='Record(s) to be added or removed(string separated by commas "+ip4:...,")',
     )
     parser.add_argument(
+        "-rd",
+        "--remove-duplicates",
+        type=bool,
+        action="store_true",
+        help="Removes duplicate mechanisms from the records"
+    )
+    parser.add_argument(
         "-dry",
         "--dry-run",
         action="store_true",
